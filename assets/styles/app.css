@@ -62,9 +62,8 @@ table {
 * {
   color: white;
   box-sizing: border-box;
-  font: 1em/1.5 'Rubik', sans-serif;
-  margin: 0;
-  padding: 0;
+  font: 1em/1.5 'Rubik';
+  cursor: pointer;
 }
 
 main {
@@ -145,15 +144,12 @@ main {
 
 /* Cards style */
 
-
 .card-case {
   display: flex;
   gap: 25px;
   max-width: 770px;
   flex-wrap: wrap;
   width: fit-content;
-  margin-right: 30px;
-
   transition: all 0.3s ease-in-out;
 }
 
@@ -164,17 +160,14 @@ main {
   align-items: end;
   display: flex;
   background-repeat: no-repeat;
-  background-position: right 15px top -10px;
+  background-position: right 20px top -10px;
   background-size: 85px;
-
   transition: all 0.3s ease-in-out;
 }
 
-
-
 .time-card {
   height: 190px;
-  width: 100%;
+  width: 101%;
   padding: 25px 30px 30px 30px;
   font-family: 'Rubik', sans-serif;
 }
@@ -248,13 +241,13 @@ main {
   background-color: var(--soft-orange);
 }
 
-/* .attribution {
+.attribution {
   display: block;
   position: absolute;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-} */
+}
 
 @media (max-width: 1200px) {
 
@@ -269,13 +262,12 @@ main {
   .card{
     width: 200px;
     height: 200px;
+    background-size: 75px;
   }
 
-  
   .this-time {
     line-height: 1;
   }
-
 
   .wrap{
     height: 425px;
@@ -284,7 +276,6 @@ main {
   .card-case{
     max-width: 650px;
   }
-
 
 }
 
@@ -299,7 +290,7 @@ main {
 }
 
 @media (max-width: 710px) {
-  
+
   main{
   height: max-content;
   max-width: 710px;
@@ -308,21 +299,91 @@ main {
   justify-content: center;
   }
 
-
   .wrap {
-    margin-top: 30px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
     height: auto;
+    width: 85%;
+    min-width: 280px;
+  }
+
+  .profile-case {
+    margin: 0;
+    width: 100%;
+    height: 200px;
+  
+  }
+
+  .profile {
+    max-width: none;
+    width: 100%;
+    display: flex;
+  }
+
+  .profile img {
+    width: 75px;
+    height: 75px;
+    margin-right: 20px;
+  }
+
+  .profile h2 {
+    font: 1.7em/1 'Rubik';
+    font-weight: 300;
+  }
+
+  .time-period {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 25px;
+    justify-content: space-around;
   }
 
   .card-case{
     flex-direction: column;
     margin: 0;
+    width: 100%;
+    max-width: none;
+    gap: 20px;
   }
 
-  .profile-case {
-    margin: 0;
+  .card {
+    width: 100%;
+    height: 150px;
   }
+
+  .time-card {
+    height: 75%;
+    padding: 15px 20px;
+  }
+
+  .time-card div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .this-time {
+    font-size: 2.5em;
+    font-weight: 300;
+  }
+  
+  .last-time {
+    display: grid;
+    font-size: 0.8em;
+    color: var(--pale-blue);
+    align-items: end;
+  }
+
+
+  .attribution {
+    display: block;
+    position:relative;
+    left: 50%;
+    width: 70%;
+    margin-top: 100px;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
  }
